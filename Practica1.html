@@ -10,7 +10,7 @@
 <body>
     <h1>Ticket de compra</h1>
     
-    <ion-section>
+    <section id="campos">
           <ion-item>
             <ion-input id="articulo" label="Artículo: " placeholder=""></ion-input>
           </ion-item>
@@ -19,11 +19,17 @@
             <ion-input id="precio" label="Monto: " type="number" placeholder=""></ion-input>
           </ion-item>
     
-    </ion-section>
+       
 
-      <ion-button onclick="agregarTicket()">Agregar fila</ion-button>
+      <ion-button onclick="agregarTicket()">Agregar</ion-button>
 
+    </section> 
 
+    <section id="ticket">
+
+        <h2>=== Ticket de compra ===</h1>
+
+    </section>
           
       <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
       <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
