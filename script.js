@@ -1,17 +1,15 @@
-var miVariable = 5; //numérico
+var articuloInput = document.getElementById("articulo");
+var precioInput = document.getElementById("precio");
 
-var campoTexto = document.getElementById("miTxt");
-var texto = ""; // campo.Texto.value = "";
-var borrar = "";
+var articulo = '';
+var monto = 0;
 
-function miFuncion(){
-    //alert(y);
-    texto = campoTexto.value;
-    alert(texto);
+var total = 0;
+
+function agregarTicket(){
+    articulo = articuloInput.ariaValueMax;
+
+    monto = parseInt(precioInput.value);
+
+    total = total + monto;
 }
-
-function miFuncion2(x){
-    x.value ="";
-}
-
-//miFuncion();
