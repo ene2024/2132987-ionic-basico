@@ -4,7 +4,7 @@ body{
     background-color: antiquewhite;
 }
 
-h1{
+h1, h2{
     background-color: palevioletred;
     color: white;
     text-align: center;
