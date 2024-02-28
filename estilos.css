@@ -1,23 +1,16 @@
-body{
-    margin:5px;
-    padding: 0;
-    background-color: antiquewhite;
+
+ion-col {
+  background-color:plum;
+  border: solid 1px black;
+  color: #fff;
+  text-align: center;
 }
 
-h1, h2{
+h1{
     background-color: palevioletred;
     color: white;
     text-align: center;
-    
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 10px;
 }
-
-ion-section{
-    margin-top: 2px;
-    
-}
-
-
-ion-button {
-    margin: 5px;
-    --background: palevioletred;
-  }
