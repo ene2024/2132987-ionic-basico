@@ -1,12 +1,16 @@
-/* Estilos etiqueta*/
 
-button {
-
-    background: aquamarine;
-    border-color: black;
-    
+ion-col {
+  background-color:plum;
+  border: solid 1px black;
+  color: #fff;
+  text-align: center;
 }
 
-body{
-    background-color: aliceblue;
+h1{
+    background-color: palevioletred;
+    color: white;
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 10px;
 }

@@ -1,17 +1,22 @@
-var miVariable = 5; //numérico
+var articuloInput = document.getElementById("articulo");
+var precioInput = document.getElementById("precio");
 
-var campoTexto = document.getElementById("miTxt");
-var texto = ""; // campo.Texto.value = "";
-var borrar = "";
+var articulo = '';
+var monto = 0;
+var total = 0;
 
-function miFuncion(){
-    //alert(y);
-    texto = campoTexto.value;
-    alert(texto);
+const seccionTicket = document.getElementById("ticket");
+
+function agregarTicket(){
+    
+    articulo = articuloInput.value;
+    monto = parseInt(precioInput.value);
+
+    total = total + monto;
+
+    var elementoTicket = document.createElement("p");
+
+    elementoTicket.textContent =  articulo + '................ $ ' + monto;
+
+    seccionTicket.appendChild(elementoTicket);
 }
-
-function miFuncion2(x){
-    x.value ="";
-}
-
-//miFuncion();
