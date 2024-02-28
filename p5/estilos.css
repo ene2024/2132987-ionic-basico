@@ -1,0 +1,16 @@
+
+ion-col {
+  background-color:plum;
+  border: solid 1px black;
+  color: #fff;
+  text-align: center;
+}
+
+h1{
+    background-color: palevioletred;
+    color: white;
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 10px;
+}
