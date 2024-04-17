@@ -25,7 +25,36 @@ export class ListaAlumnosComponent  implements OnInit {
 
   constructor(private actionSheetController: ActionSheetController) { }
 
-  
+  async mostrarActionSheet(alumno: Alumno) {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Eliminar Alumno',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          icon: 'close'
+        },
+        {
+          text: 'Borrar',
+          role: 'destructive',
+          icon: 'trash',
+          handler: () => {
+            this.eliminarAlumno(alumno);
+          }
+        }
+      ]
+    });
+    await actionSheet.present();
+  }
+
+  eliminarAlumno(alumno: Alumno) {
+    const index = this.alumnos.indexOf(alumno);
+    if (index > -1) {
+      this.alumnos.splice(index, 1);
+    }
+  }
+
+
 
   ngOnInit() {}
 
