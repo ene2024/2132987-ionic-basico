@@ -1,0 +1,19 @@
+<p>
+  productos works!
+</p>
+
+<ion-list>
+  <ion-item *ngFor="let producto of productos">
+    <ion-thumbnail slot="start">
+      <img [src]="producto.image" alt="{{ producto.title }}">
+    </ion-thumbnail>
+    <ion-label>
+      <h2>{{ producto.title }}</h2>
+      <h3>Categoría: {{ producto.category }}</h3>
+      <p>Precio: {{ producto.price }}</p>
+      <p>Descripción: {{ producto.description }}</p>
+      <p>Rating: {{ producto.rating.rate }} ({{ producto.rating.count }} reviews)</p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+
