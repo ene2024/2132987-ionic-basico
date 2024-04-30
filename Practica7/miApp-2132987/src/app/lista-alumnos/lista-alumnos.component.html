@@ -5,17 +5,36 @@
 <ion-list>
   <ion-item-sliding *ngFor="let alumno of alumnos">
     <ion-item>
-      <ion-label><span [ngClass]="{'favorito': alumno.favorito}">{{ alumno.nombre }}</span>
+      <ion-label>
+        <span [ngClass]="{'favorito': alumno.favorito}">{{ alumno.nombre }}</span>
+        <p>{{ alumno.presente ? 'Presente' : 'Ausente' }}</p>
       </ion-label>
     </ion-item>
+
     <ion-item-options side="end">
-      <ion-item-option color="primary" (click)="toggleFavorito(alumno)">Agregar a favoritos
-      </ion-item-option>
-      <ion-item-option color="danger" (click)="mostrarActionSheet(alumno)">
-        Eliminar
-      </ion-item-option>
+      <ion-item-option color="primary" (click)="toggleFavorito(alumno)">Agregar a favoritos</ion-item-option>
+      <ion-item-option color="danger" (click)="mostrarActionSheet(alumno)">Eliminar</ion-item-option>
     </ion-item-options>
   </ion-item-sliding>
 </ion-list>
+
+
+
+<form #templateForm="ngForm" (ngSubmit)="agregarAlumno()" novalidate>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input name="nombre" [(ngModel)]="nuevoAlumno.nombre" placeholder="Ejemplo: Idalia" required></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>¿Está presente?</ion-label>
+    <ion-select name="presente" [(ngModel)]="nuevoAlumno.presente">
+      <ion-select-option [value]="true">Sí</ion-select-option>
+      <ion-select-option [value]="false">No</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-button type="submit" expand="block">Agregar</ion-button>
+</form>
 
 

@@ -10,13 +10,19 @@ import { Alumno } from '../alumno.model';
 })
 export class ListaAlumnosComponent  implements OnInit {
 
+  nuevoAlumno: Alumno = {
+    nombre: '',
+    favorito: false,
+    presente: false
+  }
+
   alumnos: Alumno []= [
-    {nombre: 'Carlos', favorito: false},
-    {nombre: 'Ximena', favorito: false},
-    {nombre: 'Alberto', favorito: false}, 
-    {nombre: 'Barbara', favorito: false},
-    {nombre: 'Georgina', favorito: false},
-    {nombre: 'Kevin', favorito: false}
+    {nombre: 'Carlos', favorito: false, presente: false},
+    {nombre: 'Ximena', favorito: false, presente: true},
+    {nombre: 'Alberto', favorito: false, presente: false}, 
+    {nombre: 'Barbara', favorito: false, presente: true},
+    {nombre: 'Georgina', favorito: false, presente: true},
+    {nombre: 'Kevin', favorito: false, presente: true}
   ];
 
   toggleFavorito(alumno: Alumno): void {
@@ -52,6 +58,14 @@ export class ListaAlumnosComponent  implements OnInit {
     if (index > -1) {
       this.alumnos.splice(index, 1);
     }
+  }
+
+  agregarAlumno() {
+
+    this.alumnos.push(this.nuevoAlumno);
+    
+    console.log('Alumno agregado:', this.nuevoAlumno);
+
   }
 
 
