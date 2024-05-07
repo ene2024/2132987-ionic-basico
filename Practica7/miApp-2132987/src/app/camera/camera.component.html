@@ -1,8 +1,13 @@
-<p>camera works!</p>
-<ion-content>
-  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-    <ion-fab-button (click)="tomarFoto()">
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" *ngFor="let foto of fotos; index as i">
+        <img [src]="foto.webViewPath" alt="">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    <ion-button (click)="tomarFoto()">
       <ion-icon name="camera"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-</ion-content>
+    </ion-button>
+
