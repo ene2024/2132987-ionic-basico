@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">miApp-2132987</string>
     <string name="title_activity_main">miApp-2132987</string>
-    <string name="package_name">com.miApp.app</string>
-    <string name="custom_url_scheme">com.miApp.app</string>
+    <string name="package_name">com.miApp.practica13</string>
+    <string name="custom_url_scheme">com.miApp.practica13</string>
 </resources>

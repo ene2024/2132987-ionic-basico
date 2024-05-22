@@ -1,4 +1,4 @@
-package com.miApp.app;
+package com.miApp.practica13;
 
 import com.getcapacitor.BridgeActivity;
 
